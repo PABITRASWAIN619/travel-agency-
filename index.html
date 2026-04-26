@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TravelX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="logo">TravelX</div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <button onclick="goTo('destinations.html')">Start Exploring</button>
+        <a href="packages.html">Packages</a>
+        <a href="contact.html">Contact</a>
+        <button class="nav-btn" onclick="openModal()">Book Now</button>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="slider">
+        <img src="https://picsum.photos/1600/900?travel" class="slide active" />
+        <img src="https://picsum.photos/1600/900?beach" class="slide" />
+        <img src="https://picsum.photos/1600/900?mountain" class="slide" />
+      </div>
+
+      <div class="overlay">
+        <h1>Find Your Perfect Trip</h1>
+        <p>Explore the world with us</p>
+        <button class="main-btn" onclick="goTo('destinations.html')">
+          Start Exploring
+        </button>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <h2>Why Choose Us</h2>
+      <div class="grid">
+        <div class="feature-box">🌍 100+ Destinations</div>
+        <div class="feature-box">💰 Best Price</div>
+        <div class="feature-box">⭐ 5-Star Service</div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section class="top-picks">
+      <h2>Top Destinations</h2>
+
+      <div class="grid">
+        <div class="card">
+          <img src="https://picsum.photos/400/300?paris" />
+          <p>Paris</p>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/400/300?bali" />
+          <p>Bali</p>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/400/300?goa" />
+          <p>Goa</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <h2>Subscribe</h2>
+      <input type="email" id="emailBox" placeholder="Enter your email" />
+      <button onclick="subscribe()">Subscribe</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- BRAND -->
+        <div class="footer-box">
+          <h2>TravelX</h2>
+          <p>
+            Your trusted travel partner. Explore the world with comfort and
+            ease.
+          </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-box">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+          <h3>Contact</h3>
+          <p>Email: travelx@gmail.com</p>
+          <p>Phone: +918658302086</p>
+          <p>Location: India</p>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+
+          <div class="social-icons">
+            <i class="fab fa-facebook-f" onclick="social('facebook')"></i>
+            <i class="fab fa-instagram" onclick="social('instagram')"></i>
+            <i class="fab fa-twitter" onclick="social('twitter')"></i>
+            <i class="fab fa-whatsapp" onclick="social('whatsapp')"></i>
+          </div>
+        </div>
+      </div>
+
+      <p class="copyright">© 2026 TravelX | All Rights Reserved</p>
+    </footer>
+
+    <!-- BOOKING MODAL -->
+    <div id="bookingModal" class="modal">
+      <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <h2>Book Your Trip</h2>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="date" />
+        <button onclick="confirmBooking()">Confirm</button>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

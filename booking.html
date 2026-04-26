@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Book Now - TravelX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="booking.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">TravelX</div>
+    </header>
+
+    <!-- BOOKING SECTION -->
+    <section class="booking-section">
+      <div class="booking-card">
+        <h1>✈️ Book Your Trip</h1>
+
+        <form onsubmit="return submitBooking();">
+          <input type="text" id="name" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email Address" required />
+
+          <select id="destination" required>
+            <option value="">Select Destination</option>
+            <option>Goa</option>
+            <option>Bali</option>
+            <option>Paris</option>
+            <option>Dubai</option>
+          </select>
+
+          <input type="date" id="date" required />
+
+          <button type="submit">Confirm Booking</button>
+        </form>
+
+        <p id="successMsg"></p>
+      </div>
+    </section>
+
+    <script>
+      function submitBooking() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let dest = document.getElementById("destination").value;
+        let date = document.getElementById("date").value;
+
+        if (!name || !email || !dest || !date) {
+          alert("Fill all fields");
+          return false;
+        }
+
+        document.getElementById("successMsg").innerHTML =
+          "✅ Booking Confirmed for <b>" + dest + "</b>";
+
+        return false;
+      }
+    </script>
+  </body>
+</html>

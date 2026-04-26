@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Packages - TravelX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="packages.css" />
+
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="logo">TravelX</div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <nav id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="package-hero">
+      <h1>Explore Our Travel Packages</h1>
+      <p>Best deals curated just for you</p>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="packages">
+      <div class="package-grid">
+        <!-- CARD 1 -->
+        <div class="package-card">
+          <img src="https://picsum.photos/400/300?goa" />
+
+          <div class="package-content">
+            <h3>Goa Trip</h3>
+            <p>3 Days / 2 Nights</p>
+
+            <div class="price">₹8,999</div>
+
+            <button onclick="bookNow()">Book Now</button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="package-card">
+          <img src="https://picsum.photos/400/300?bali" />
+
+          <div class="package-content">
+            <h3>Bali Tour</h3>
+            <p>5 Days / 4 Nights</p>
+
+            <div class="price">₹35,000</div>
+
+            <button onclick="bookNow()">Book Now</button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="package-card">
+          <img src="https://picsum.photos/400/300?paris" />
+
+          <div class="package-content">
+            <h3>Paris Holiday</h3>
+            <p>6 Days / 5 Nights</p>
+
+            <div class="price">₹75,000</div>
+
+            <button onclick="bookNow()">Book Now</button>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="package-card">
+          <img src="https://picsum.photos/400/300?dubai" />
+
+          <div class="package-content">
+            <h3>Dubai Luxury</h3>
+            <p>4 Days / 3 Nights</p>
+
+            <div class="price">₹25,000</div>
+
+            <button onclick="bookNow()">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>TravelX</h3>
+          <p>Your trusted travel partner</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="destinations.html">Destinations</a></p>
+          <p><a href="packages.html">Packages</a></p>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <p>Email: travelx@gmail.com</p>
+          <p>Phone: +918658302086</p>
+        </div>
+
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-whatsapp"></i>
+          </div>
+        </div>
+      </div>
+
+      <p class="copy">© 2026 TravelX</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Destinations - TravelX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="destinations.css" />
+
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="logo">TravelX</div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <nav id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="destinations.html" class="active">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Explore Destinations</h1>
+      <p>Find your next dream place 🌍</p>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-box">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search destinations..."
+        onkeyup="filterDest()"
+      />
+    </section>
+
+    <!-- DESTINATIONS GRID -->
+    <section class="destinations">
+      <div class="grid">
+        <!-- CARD -->
+        <div class="card">
+          <img src="https://picsum.photos/400/300?paris" />
+          <div class="info">
+            <h3>Paris</h3>
+            <p>France • ⭐ 5.0</p>
+            <button onclick="goTo('booking.html')">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/400/300?bali" />
+          <div class="info">
+            <h3>Bali</h3>
+            <p>Indonesia • ⭐ 4.8</p>
+            <button onclick="goTo('booking.html')">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/400/300?goa" />
+          <div class="info">
+            <h3>Goa</h3>
+            <p>India • ⭐ 4.5</p>
+            <button onclick="goTo('booking.html')">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/400/300?dubai" />
+          <div class="info">
+            <h3>Dubai</h3>
+            <p>UAE • ⭐ 4.7</p>
+            <button onclick="goTo('booking.html')">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/400/300?maldives" />
+          <div class="info">
+            <h3>Maldives</h3>
+            <p>Island • ⭐ 5.0</p>
+            <button onclick="goTo('booking.html')">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/400/300?mountain" />
+          <div class="info">
+            <h3>Switzerland</h3>
+            <p>Europe • ⭐ 4.9</p>
+            <button onclick="goTo('booking.html')">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 TravelX | All Rights Reserved</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
