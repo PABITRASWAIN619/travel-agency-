@@ -331,3 +331,15 @@ function filterDest() {
       card.innerText.toLowerCase().includes(input) ? "block" : "none";
   });
 }
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 50) {
+    header.style.boxShadow = "0 5px 20px rgba(0,0,0,0.3)";
+  } else {
+    header.style.boxShadow = "none";
+  }
+});
+window.onload = function () {
+  document.getElementById("loader").style.display = "none";
+};

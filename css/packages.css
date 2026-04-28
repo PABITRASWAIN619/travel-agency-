@@ -312,3 +312,75 @@ nav a:hover {
     justify-content: center;
   }
 }
+@media(max-width:768px){
+  .package-hero h1 {
+    font-size: 28px;
+  }
+
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.3)
+  );
+  top: 0;
+  left: 0;
+}
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons i {
+  font-size: 18px;
+  color: white;
+  background: rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* HOVER COLORS */
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+/* BRAND COLORS */
+.fa-facebook-f:hover {
+  background: #1877f2;
+}
+
+.fa-instagram:hover {
+  background: #e1306c;
+}
+
+.fa-twitter:hover {
+  background: #1da1f2;
+}
+
+.fa-whatsapp:hover {
+  background: #25d366;
+}

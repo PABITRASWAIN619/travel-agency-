@@ -472,3 +472,96 @@ footer {
     font-size: 16px;
   }
 }
+/* ===== GLASS EFFECT ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+/* USE ON CARDS */
+.card,
+.package-card,
+.contact-form,
+.contact-info,
+.feature-box {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover,
+.package-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+html {
+  scroll-behavior: smooth;
+}
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.3)
+  );
+  top: 0;
+  left: 0;
+}
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px;
+  background: #fff;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h2 {
+  font-size: 40px;
+  color: orange;
+}
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0a3d62;
+  z-index: 9999;
+}
+
+#loader::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 5px solid white;
+  border-top: 5px solid orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
