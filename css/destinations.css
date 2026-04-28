@@ -1,101 +1,173 @@
-/* RESET */
+/* ===== GLOBAL RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* NAVBAR */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4f7fb;
+}
+
+/* ===== NAVBAR (FIXED TOP) ===== */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(10, 61, 98, 0.9);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
-  background: #0a3d62;
+  align-items: center;
+  padding: 0 40px;
   color: white;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* NAV LINKS */
+nav {
+  display: flex;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
+  position: relative;
+  transition: 0.3s;
 }
 
+/* ACTIVE LINK */
 nav a.active {
-  border-bottom: 2px solid orange;
+  color: orange;
 }
 
-/* HERO */
+/* HOVER EFFECT */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: orange;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* MENU ICON (MOBILE) */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===== HERO ===== */
 .hero {
-  height: 50vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url("https://picsum.photos/1600/800?travel") center/cover;
+  height: 55vh;
+  margin-top: 70px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+              url("https://picsum.photos/1600/900?mountain") center/cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
+  text-align: center;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 42px;
 }
 
-/* SEARCH */
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* ===== SEARCH ===== */
 .search-box {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .search-box input {
-  width: 300px;
-  padding: 10px;
+  width: 350px;
+  max-width: 90%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* GRID */
+/* ===== DESTINATION SECTION ===== */
 .destinations {
-  padding: 40px;
+  padding: 40px 20px;
 }
 
+/* GRID FIX (IMPORTANT) */
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* CARD */
+/* ===== CARD ===== */
 .card {
-  width: 300px;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
   transition: 0.3s;
 }
 
+/* IMAGE */
 .card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px) scale(1.02);
 }
 
-/* INFO OVERLAY */
+/* GLASS OVERLAY */
 .info {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0,0,0,0.6);
-  color: white;
   padding: 15px;
+  color: white;
+
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+
   transform: translateY(100%);
   transition: 0.4s;
 }
 
+/* SHOW ON HOVER */
 .card:hover .info {
   transform: translateY(0);
 }
@@ -106,55 +178,58 @@ nav a.active {
   padding: 8px 15px;
   background: orange;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* FOOTER */
+.info button:hover {
+  transform: scale(1.08);
+}
+
+/* ===== FOOTER ===== */
 footer {
   background: #0a3d62;
   color: white;
   text-align: center;
   padding: 15px;
+  margin-top: 40px;
 }
 
-/* ANIMATION */
-@keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
-}
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
 
-/* RESPONSIVE */
-@media(max-width:768px){
+  /* NAV MENU */
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    background: #0a3d62;
+    flex-direction: column;
+    display: none;
+    padding: 15px;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  /* SHOW MENU ICON */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* HERO TEXT */
   .hero h1 {
     font-size: 28px;
   }
 
-  .search-box input {
-    width: 90%;
+  .hero p {
+    font-size: 14px;
   }
-}
-html {
-  scroll-behavior: smooth;
-}
-button {
-  transition: 0.3s;
-}
-
-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.7),
-    rgba(0,0,0,0.3)
-  );
-  top: 0;
-  left: 0;
 }

@@ -5,6 +5,7 @@
     <title>Destinations - TravelX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/destinations.css" />
 
     <!-- ICONS -->
@@ -12,16 +13,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  </script>
   <body>
     <!-- NAVBAR -->
     <header>
@@ -49,16 +45,16 @@
       <input
         type="text"
         id="search"
-        placeholder="Search destinations..."
+        placeholder="Search..."
         onkeyup="filterDest()"
       />
     </section>
 
-    <!-- DESTINATIONS GRID -->
+    <!-- DESTINATIONS -->
     <section class="destinations">
       <div class="grid">
         <!-- CARD -->
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img src="https://picsum.photos/400/300?paris" />
           <div class="info">
             <h3>Paris</h3>
@@ -67,7 +63,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img src="https://picsum.photos/400/300?bali" />
           <div class="info">
             <h3>Bali</h3>
@@ -76,38 +72,11 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <img src="https://picsum.photos/400/300?goa" />
           <div class="info">
             <h3>Goa</h3>
             <p>India • ⭐ 4.5</p>
-            <button onclick="goTo('booking.html')">Book Now</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://picsum.photos/400/300?dubai" />
-          <div class="info">
-            <h3>Dubai</h3>
-            <p>UAE • ⭐ 4.7</p>
-            <button onclick="goTo('booking.html')">Book Now</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://picsum.photos/400/300?maldives" />
-          <div class="info">
-            <h3>Maldives</h3>
-            <p>Island • ⭐ 5.0</p>
-            <button onclick="goTo('booking.html')">Book Now</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://picsum.photos/400/300?mountain" />
-          <div class="info">
-            <h3>Switzerland</h3>
-            <p>Europe • ⭐ 4.9</p>
             <button onclick="goTo('booking.html')">Book Now</button>
           </div>
         </div>
@@ -116,9 +85,18 @@
 
     <!-- FOOTER -->
     <footer>
-      <p>© 2026 TravelX | All Rights Reserved</p>
+      <p>© 2026 TravelX</p>
     </footer>
 
+    <!-- JS (VERY IMPORTANT AT BOTTOM) -->
     <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
   </body>
 </html>

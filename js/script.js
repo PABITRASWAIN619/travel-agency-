@@ -343,3 +343,23 @@ window.addEventListener("scroll", () => {
 window.onload = function () {
   document.getElementById("loader").style.display = "none";
 };
+function goTo(page) {
+  window.location.href = page;
+}
+
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+
+function filterDest() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    let text = card.innerText.toLowerCase();
+    card.style.display = text.includes(input) ? "block" : "none";
+  });
+}
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
