@@ -27,13 +27,20 @@
     <!-- NAVBAR -->
     <header>
       <div class="logo">TravelX</div>
-      <nav>
-        <a href="index.html" class="active">Home</a>
+
+      <!-- HAMBURGER -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="navLinks">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <button onclick="goTo('destinations.html')">Start Exploring</button>
+        <a href="destinations.html">Destinations</a>
         <a href="packages.html">Packages</a>
         <a href="contact.html">Contact</a>
-        <button class="nav-btn" onclick="openModal()">Book Now</button>
       </nav>
     </header>
 
